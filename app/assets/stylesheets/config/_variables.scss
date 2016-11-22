@@ -6,15 +6,42 @@
 $base-font: "Open Sans", "Helvetica", "sans-serif";
 $header-font: "Raleway", "Helvetica", "sans-serif";
 
-// Local fonts (uncomment following lines)
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+
+@font-face {
+  font-family: "BrandonLight";
+  src: font-url('BrandonLight.eot');
+  src: font-url('BrandonLight.eot?#iefix') format('embedded-opentype'),
+       font-url('BrandonLight.woff') format('woff'),
+       font-url('BrandonLight.ttf') format('truetype')
+}
+$brandon-light: "BrandonLight";
+
+@font-face {
+  font-family: "BrandonBold";
+  src: font-url('BrandonBold.eot');
+  src: font-url('BrandonBold.eot?#iefix') format('embedded-opentype'),
+       font-url('BrandonBold.woff') format('woff'),
+       font-url('BrandonBold.ttf') format('truetype')
+}
+$brandon-bold: "BrandonBold";
+
+@font-face {
+  font-family: "WalsheimBold";
+  src: font-url('WalsheimBold.eot');
+  src: font-url('WalsheimBold.eot?#iefix') format('embedded-opentype'),
+       font-url('WalsheimBold.woff') format('woff'),
+       font-url('WalsheimBold.ttf') format('truetype')
+}
+$walsheim-bold: "WalsheimBold";
+
+@font-face {
+  font-family: "TiemposRegular";
+  src: font-url('TiemposRegular.eot');
+  src: font-url('TiemposRegular.eot?#iefix') format('embedded-opentype'),
+       font-url('TiemposRegular.woff') format('woff'),
+       font-url('TiemposRegular.ttf') format('truetype')
+}
+$tiempos-regular: "TiemposRegular";
 
 // Font-size and line-height
 $base-size: 16px;
