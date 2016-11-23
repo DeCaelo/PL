@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161121135633) do
+ActiveRecord::Schema.define(version: 20161123105833) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,19 @@ ActiveRecord::Schema.define(version: 20161121135633) do
     t.index ["user_id"], name: "index_plannings_on_user_id", using: :btree
   end
 
+  create_table "shifts", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "job_id"
+    t.integer  "planning_id"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["job_id"], name: "index_shifts_on_job_id", using: :btree
+    t.index ["planning_id"], name: "index_shifts_on_planning_id", using: :btree
+    t.index ["user_id"], name: "index_shifts_on_user_id", using: :btree
+  end
+
   create_table "shops", force: :cascade do |t|
     t.string   "name"
     t.integer  "opening_time"
@@ -91,4 +104,7 @@ ActiveRecord::Schema.define(version: 20161121135633) do
   add_foreign_key "employees", "users"
   add_foreign_key "plannings", "shops"
   add_foreign_key "plannings", "users"
+  add_foreign_key "shifts", "jobs"
+  add_foreign_key "shifts", "plannings"
+  add_foreign_key "shifts", "users"
 end
