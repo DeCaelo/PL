@@ -2,6 +2,7 @@ class JobsController < ApplicationController
 
   def new
     @job = Job.new
+    @jobs = Job.all
   end
 
   def create

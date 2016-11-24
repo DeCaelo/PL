@@ -1,0 +1,6 @@
+<%= simple_form_for(@job) do |f| %>
+  <%= f.error_notification %>
+    <h1>Créer un nouveau poste</h1>
+    <%= f.input :name %>
+    <%= f.submit 'Créer un poste', class: "btn btn-medium" %>
+<% end %>
